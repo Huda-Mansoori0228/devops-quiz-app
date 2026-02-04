@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
     {
       "id": "Q1",
       "topic": "DevOps Culture",
@@ -131,74 +130,140 @@
   "answerIndex": 1,
   "explanation": "A commit records changes in the local repository with a message."
 }
+,
+{
+  "id": "Q11",
+  "topic": "Continuous Integration",
+  "question": "What is the primary goal of Continuous Integration?",
+  "options": [
+    "Deploy code to production automatically",
+    "Integrate code changes frequently into a shared repository",
+    "Eliminate the need for testing",
+    "Remove the need for version control"
+  ],
+  "answerIndex": 1,
+  "explanation": "CI focuses on frequently integrating code to detect issues early."
+},
+{
+  "id": "Q12",
+  "topic": "Continuous Integration",
+  "question": "Which activity is typically automated in a CI pipeline?",
+  "options": [
+    "Writing user stories",
+    "Running automated tests",
+    "Conducting meetings",
+    "Planning releases"
+  ],
+  "answerIndex": 1,
+  "explanation": "Automated testing is a core part of CI."
+},
+{
+  "id": "Q13",
+  "topic": "Continuous Integration",
+  "question": "How often should developers commit code in Continuous Integration?",
+  "options": [
+    "Once a month",
+    "Only before deployment",
+    "Frequently",
+    "At the end of the project"
+  ],
+  "answerIndex": 2,
+  "explanation": "Frequent commits reduce integration problems."
+},
+{
+  "id": "Q14",
+  "topic": "Continuous Integration",
+  "question": "What should a team do when a CI build fails?",
+  "options": [
+    "Ignore the failure",
+    "Deploy the code anyway",
+    "Investigate and fix the issue immediately",
+    "Delete the repository"
+  ],
+  "answerIndex": 2,
+  "explanation": "CI failures should be fixed quickly to keep the build stable."
+},
+{
+  "id": "Q15",
+  "topic": "Continuous Integration",
+  "question": "Which tool is commonly used for Continuous Integration?",
+  "options": [
+    "Jenkins",
+    "Photoshop",
+    "Excel",
+    "Notepad"
+  ],
+  "answerIndex": 0,
+  "explanation": "Jenkins is a widely used CI tool."
+}
+
+,
+{
+  "id": "Q16",
+  "topic": "Continuous Delivery",
+  "question": "What does Continuous Delivery ensure?",
+  "options": [
+    "Software is always ready for deployment",
+    "Deployments are done manually only",
+    "Testing is skipped",
+    "Automation is avoided"
+  ],
+  "answerIndex": 0,
+  "explanation": "Continuous Delivery ensures software can be deployed at any time."
+},
+{
+  "id": "Q17",
+  "topic": "Continuous Delivery",
+  "question": "What is the key difference between Continuous Delivery and Continuous Deployment?",
+  "options": [
+    "They are the same",
+    "Continuous Delivery requires manual approval before deployment",
+    "Continuous Deployment skips testing",
+    "Continuous Delivery avoids automation"
+  ],
+  "answerIndex": 1,
+  "explanation": "Delivery may require approval, while deployment is fully automatic."
+},
+{
+  "id": "Q18",
+  "topic": "Continuous Deployment",
+  "question": "What happens in Continuous Deployment?",
+  "options": [
+    "Code is deployed automatically after passing tests",
+    "Deployments happen once a year",
+    "Manual approval is always required",
+    "Automation is not used"
+  ],
+  "answerIndex": 0,
+  "explanation": "Continuous Deployment releases changes automatically after tests pass."
+},
+{
+  "id": "Q19",
+  "topic": "Continuous Deployment",
+  "question": "What is a major benefit of Continuous Deployment?",
+  "options": [
+    "Slower releases",
+    "Faster user feedback",
+    "More manual work",
+    "Less automation"
+  ],
+  "answerIndex": 1,
+  "explanation": "Frequent releases provide faster feedback from users."
+},
+{
+  "id": "Q20",
+  "topic": "Continuous Delivery",
+  "question": "Why is automation important in CD pipelines?",
+  "options": [
+    "It increases human error",
+    "It slows down development",
+    "It reduces manual mistakes",
+    "It removes collaboration"
+  ],
+  "answerIndex": 2,
+  "explanation": "Automation reduces errors and improves reliability."
+}
+
 
   ]
   
-=======
-  {
-    "id": "Q1",
-    "topic": "DevOps Culture",
-    "question": "What is the primary goal of DevOps?",
-    "options": [
-      "To replace developers with automation",
-      "To improve collaboration between development and operations teams",
-      "To eliminate the need for system administrators",
-      "To focus only on faster software delivery"
-    ],
-    "answerIndex": 1,
-    "explanation": "DevOps focuses on collaboration and shared responsibility between development and operations."
-  },
-  {
-    "id": "Q2",
-    "topic": "DevOps Culture",
-    "question": "Which practice best represents a DevOps culture?",
-    "options": [
-      "Strict separation between teams",
-      "Blaming individuals for failures",
-      "Shared ownership of system reliability",
-      "Avoiding automation"
-    ],
-    "answerIndex": 2,
-    "explanation": "DevOps encourages shared ownership and accountability across teams."
-  },
-  {
-    "id": "Q3",
-    "topic": "DevOps Culture",
-    "question": "Why is collaboration important in DevOps?",
-    "options": [
-      "It increases the number of meetings",
-      "It reduces communication between teams",
-      "It helps deliver software faster and more reliably",
-      "It removes the need for testing"
-    ],
-    "answerIndex": 2,
-    "explanation": "Collaboration reduces delays and improves software quality and reliability."
-  },
-  {
-    "id": "Q4",
-    "topic": "DevOps Culture",
-    "question": "What does the term 'shared responsibility' mean in DevOps?",
-    "options": [
-      "Only operations teams handle failures",
-      "Only developers are responsible for bugs",
-      "Both development and operations share responsibility for outcomes",
-      "Management handles all issues"
-    ],
-    "answerIndex": 2,
-    "explanation": "DevOps promotes shared responsibility for building, deploying, and maintaining systems."
-  },
-  {
-    "id": "Q5",
-    "topic": "DevOps Culture",
-    "question": "Which behavior aligns best with DevOps principles?",
-    "options": [
-      "Working in isolation",
-      "Frequent feedback and continuous improvement",
-      "Avoiding change",
-      "Manual deployments only"
-    ],
-    "answerIndex": 1,
-    "explanation": "DevOps emphasizes continuous feedback and ongoing improvement."
-  }
-]
->>>>>>> 59de289b47f14d46a74f43f9d3e2edad0435db31
