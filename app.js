@@ -1,63 +1,84 @@
 let questions = [];
-let filtered = [];
-let index = 0;
+let filteredQuestions = [];
+let currentIndex = 0;
 
-fetch("data/questions.json")
-  .then(r => r.json())
-  .then(data => {
-    questions = data;
-    loadTopics();
-    applyFilter();
-    show();
-  });
+const topicSelect = document.getElementById('topic');
+const startBtn = document.getElementById('start-quiz');
+const quizContainer = document.getElementById('quiz-container');
+const questionText = document.getElementById('question-text');
+const optionsContainer = document.getElementById('options-container');
+const nextBtn = document.getElementById('next-question');
+const feedback = document.getElementById('feedback');
 
-function loadTopics() {
-  const select = document.getElementById("topicSelect");
-  [...new Set(questions.map(q => q.topic))].forEach(t => {
-    const o = document.createElement("option");
-    o.value = t;
-    o.textContent = t;
-    select.appendChild(o);
-  });
-  select.onchange = () => {
-    applyFilter();
-    index = 0;
-    show();
-  };
+async function loadQuestions() {
+    const response = await fetch('data/questions.json');
+    questions = await response.json();
+    populateTopics();
 }
 
-function applyFilter() {
-  const t = document.getElementById("topicSelect").value;
-  filtered = t === "all" ? questions : questions.filter(q => q.topic === t);
+function populateTopics() {
+    const topics = [...new Set(questions.map(q => q.topic))];
+    topics.forEach(topic => {
+        const option = document.createElement('option');
+        option.value = topic;
+        option.textContent = topic;
+        topicSelect.appendChild(option);
+    });
 }
 
-function show() {
-  document.getElementById("options").innerHTML = "";
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("explanation").textContent = "";
-  document.getElementById("nextBtn").disabled = true;
-
-  if (!filtered[index]) return;
-
-  const q = filtered[index];
-  document.getElementById("question").textContent = q.question;
-
-  q.options.forEach((o, i) => {
-    const b = document.createElement("button");
-    b.textContent = o;
-    b.onclick = () => check(i, q);
-    document.getElementById("options").appendChild(b);
-  });
+function startQuiz() {
+    const selectedTopic = topicSelect.value;
+    filteredQuestions = selectedTopic
+        ? questions.filter(q => q.topic === selectedTopic)
+        : [...questions];
+    currentIndex = 0;
+    quizContainer.classList.remove('hidden');
+    document.getElementById('topic-selection').classList.add('hidden');
+    showQuestion();
 }
 
-function check(i, q) {
-  document.getElementById("feedback").textContent =
-    i === q.answerIndex ? "Correct!" : "Incorrect!";
-  document.getElementById("explanation").textContent = q.explanation;
-  document.getElementById("nextBtn").disabled = false;
+function showQuestion() {
+    const currentQ = filteredQuestions[currentIndex];
+    questionText.textContent = `${currentIndex + 1}. ${currentQ.question}`;
+    optionsContainer.innerHTML = '';
+
+    currentQ.options.forEach((opt, index) => {
+        const btn = document.createElement('button');
+        btn.classList.add('option-button');
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(index);
+        optionsContainer.appendChild(btn);
+    });
+
+    feedback.textContent = '';
+    nextBtn.style.display = 'none';
 }
 
-document.getElementById("nextBtn").onclick = () => {
-  index++;
-  show();
-};
+function checkAnswer(selectedIndex) {
+    const currentQ = filteredQuestions[currentIndex];
+    const optionButtons = document.querySelectorAll('.option-button');
+
+    optionButtons.forEach((btn, i) => {
+        if (i === currentQ.answerIndex) btn.classList.add('correct');
+        if (i === selectedIndex && i !== currentQ.answerIndex) btn.classList.add('incorrect');
+        btn.disabled = true;
+    });
+
+    feedback.textContent = currentQ.explanation;
+    nextBtn.style.display = 'inline-block';
+}
+
+function nextQuestion() {
+    currentIndex++;
+    if (currentIndex >= filteredQuestions.length) {
+        alert('Quiz completed!');
+        location.reload();
+    } else {
+        showQuestion();
+    }
+}
+
+startBtn.addEventListener('click', startQuiz);
+nextBtn.addEventListener('click', nextQuestion);
+
+window.onload = loadQuestions;
