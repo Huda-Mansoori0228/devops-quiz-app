@@ -1,0 +1,135 @@
+[
+    {
+      "id": "Q1",
+      "topic": "DevOps Culture",
+      "question": "What is the primary goal of DevOps?",
+      "options": [
+        "To replace developers with automation",
+        "To improve collaboration between development and operations teams",
+        "To eliminate the need for system administrators",
+        "To focus only on faster software delivery"
+      ],
+      "answerIndex": 1,
+      "explanation": "DevOps focuses on collaboration and shared responsibility between development and operations."
+    },
+    {
+      "id": "Q2",
+      "topic": "DevOps Culture",
+      "question": "Which practice best represents a DevOps culture?",
+      "options": [
+        "Strict separation between teams",
+        "Blaming individuals for failures",
+        "Shared ownership of system reliability",
+        "Avoiding automation"
+      ],
+      "answerIndex": 2,
+      "explanation": "DevOps encourages shared ownership and accountability across teams."
+    },
+    {
+      "id": "Q3",
+      "topic": "DevOps Culture",
+      "question": "Why is collaboration important in DevOps?",
+      "options": [
+        "It increases the number of meetings",
+        "It reduces communication between teams",
+        "It helps deliver software faster and more reliably",
+        "It removes the need for testing"
+      ],
+      "answerIndex": 2,
+      "explanation": "Collaboration reduces delays and improves software quality and reliability."
+    },
+    {
+      "id": "Q4",
+      "topic": "DevOps Culture",
+      "question": "What does the term 'shared responsibility' mean in DevOps?",
+      "options": [
+        "Only operations teams handle failures",
+        "Only developers are responsible for bugs",
+        "Both development and operations share responsibility for outcomes",
+        "Management handles all issues"
+      ],
+      "answerIndex": 2,
+      "explanation": "DevOps promotes shared responsibility for building, deploying, and maintaining systems."
+    },
+    {
+      "id": "Q5",
+      "topic": "DevOps Culture",
+      "question": "Which behavior aligns best with DevOps principles?",
+      "options": [
+        "Working in isolation",
+        "Frequent feedback and continuous improvement",
+        "Avoiding change",
+        "Manual deployments only"
+      ],
+      "answerIndex": 1,
+      "explanation": "DevOps emphasizes continuous feedback and ongoing improvement."
+    }
+    ,
+{
+  "id": "Q6",
+  "topic": "Version Control Systems",
+  "question": "What is the main purpose of a version control system?",
+  "options": [
+    "To delete old code",
+    "To track changes and manage code versions",
+    "To compile programs",
+    "To replace testing"
+  ],
+  "answerIndex": 1,
+  "explanation": "Version control systems track changes and allow collaboration on code."
+},
+{
+  "id": "Q7",
+  "topic": "Version Control Systems",
+  "question": "Which version control system is distributed?",
+  "options": [
+    "SVN",
+    "CVS",
+    "Git",
+    "FTP"
+  ],
+  "answerIndex": 2,
+  "explanation": "Git is a distributed version control system."
+},
+{
+  "id": "Q8",
+  "topic": "Version Control Systems",
+  "question": "What is a Git repository?",
+  "options": [
+    "A backup server",
+    "A place to store and manage project files and history",
+    "A deployment tool",
+    "A testing framework"
+  ],
+  "answerIndex": 1,
+  "explanation": "A repository stores project files and tracks their change history."
+},
+{
+  "id": "Q9",
+  "topic": "Version Control Systems",
+  "question": "Why are branches used in Git?",
+  "options": [
+    "To delete code safely",
+    "To work on features independently",
+    "To store backups",
+    "To deploy applications"
+  ],
+  "answerIndex": 1,
+  "explanation": "Branches allow developers to work on features without affecting the main code."
+},
+{
+  "id": "Q10",
+  "topic": "Version Control Systems",
+  "question": "What does committing changes do in Git?",
+  "options": [
+    "Uploads code to production",
+    "Saves changes to the local repository history",
+    "Deletes old files",
+    "Merges branches automatically"
+  ],
+  "answerIndex": 1,
+  "explanation": "A commit records changes in the local repository with a message."
+}
+
+  ]
+  
